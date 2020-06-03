@@ -20,7 +20,7 @@ header {
     text-align: center;
 }
 
-.container-fluid h1 {
+.container h1 {
     margin: 0;
 }
 
@@ -29,7 +29,7 @@ header {
     width: 300px;
 }
 
-.navbar a {
+#nav-bar ul li a {
     display: block;
     text-align: center;
     margin: 5px 0;
@@ -67,7 +67,7 @@ header {
     width: 100%;
 }
 
-.pricing {
+.product {
     border: 1px solid black;
     text-align: center;
     border-radius: 3px;
@@ -90,8 +90,13 @@ h2 {
     margin: 15px 0;
 }
 
+#howitworks iframe {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
 
-/* .product button {
+#selectbutton {
     padding: 7px;
     width: 100px;
     background: yellow;
@@ -101,7 +106,7 @@ h2 {
     border: none;
     margin: 10px 0;
     font-weight: bold;
-} */
+}
 
 @media(min-width: 550px) {
     .pricing {
@@ -110,6 +115,7 @@ h2 {
     }
     #features {
         text-align: left;
+        margin-left: 10px;
     }
 }
 
@@ -118,9 +124,12 @@ h2 {
         display: flex;
         padding: 20px 25px;
     }
-    .navbar {
-        margin-left: 80px;
+    #nav-bar {
+        margin-left: 100px;
         padding: 0 30px;
+    }
+    li {
+        list-style: none;
     }
     .logo {
         align-self: center;
@@ -134,28 +143,28 @@ h2 {
     header {
         justify-content: space-around;
     }
-    .navbar {
+    #nav-bar {
         display: flex;
         justify-content: space-around;
         width: 50%;
         padding: 0;
         margin: 0;
     }
-    .navbar a {
+    #nav-bar a {
         flex: 1;
     }
-    .navbar a:not(:last-of-type) {
+    #nav-bar a:not(:last-of-type) {
         margin-right: 12px;
     }
 }
 
 @media(min-width:800px) {
-    .pricing {
+    #product {
         width: 96%;
         display: flex;
         margin: 20px auto;
     }
-    .pricing:not(:last-of-type) {
+    .product:not(:last-of-type) {
         margin-right: 25px;
     }
     #features {
@@ -165,7 +174,7 @@ h2 {
 }
 
 @media(min-width:1024px) {
-    .product-grid {
+    .product {
         width: 100%;
         max-width: 1024px;
         margin: 0 auto;
