@@ -1,18 +1,173 @@
 * {
     box-sizing: border-box;
     padding: 0;
+    margin-top: 0;
+}
+
+body {
+    background: #eee;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background: #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.container-fluid h1 {
     margin: 0;
 }
 
 #header-img {
-    max-width: 100%;
-    width: 20%;
+    font-size: 25px;
+    width: 300px;
 }
 
-#header {
-    display: flex;
+.navbar a {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-#nav-bar {
-    display: float;
+.container {
+    text-align: center;
+    margin-top: 140px;
+}
+
+#email {
+    padding: 10px;
+    width: 300px;
+    margin: 20px;
+}
+
+#submit {
+    background: yellow;
+    outline: none;
+    border: none;
+    padding: 10px 12px;
+    font-size: 17px;
+    line-height: 1;
+}
+
+#howitworks {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+#how-it-works iframe {
+    width: 100%;
+}
+
+.pricing {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+}
+
+#features {
+    text-align: center;
+}
+
+ol {
+    list-style: none;
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+
+/* .product button {
+    padding: 7px;
+    width: 100px;
+    background: yellow;
+    cursor: pointer;
+    border-radius: 3px;
+    text-transform: uppercase;
+    border: none;
+    margin: 10px 0;
+    font-weight: bold;
+} */
+
+@media(min-width: 550px) {
+    .pricing {
+        display: flex;
+        margin: 10px 15px;
+    }
+    #features {
+        text-align: left;
+    }
+}
+
+@media(min-width:600px) {
+    header {
+        display: flex;
+        padding: 20px 25px;
+    }
+    .navbar {
+        margin-left: 80px;
+        padding: 0 30px;
+    }
+    .logo {
+        align-self: center;
+    }
+    #howitworks {
+        max-width: 560px;
+    }
+}
+
+@media(min-width:650px) {
+    header {
+        justify-content: space-around;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar a {
+        flex: 1;
+    }
+    .navbar a:not(:last-of-type) {
+        margin-right: 12px;
+    }
+}
+
+@media(min-width:800px) {
+    .pricing {
+        width: 96%;
+        display: flex;
+        margin: 20px auto;
+    }
+    .pricing:not(:last-of-type) {
+        margin-right: 25px;
+    }
+    #features {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width:1024px) {
+    .product-grid {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
 }
